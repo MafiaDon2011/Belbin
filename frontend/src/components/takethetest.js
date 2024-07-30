@@ -1,3 +1,5 @@
+import SectionList from "./sectionlist";
+
 function Test(props) {
   return (
     <>
@@ -11,7 +13,8 @@ function Test(props) {
         might decide that there are two sentences which apply to you equally - if this is the case, award five points 
         to each. <br></br><br></br><strong>You must allocate all 10 points in each section.</strong></p>
 
-    </div>       
+    </div>    
+    <SectionList />   
     </>  
   );
 }
