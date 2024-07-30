@@ -28,7 +28,7 @@ class SectionList extends React.Component {
 
   render() {
     if (!this.state.sections.length) {
-      return <h3>Loading sections...</h3>
+      return <h3 style={{ textAlign:'center', padding:15 }}>Loading sections...</h3>
     }
 
     const cardList = this.state.sections.map((section, index) => {

@@ -18,38 +18,29 @@ class SectionCard extends React.Component {
                     }
                     description={
                       <div style={{ fontSize: 'Medium', lineHeight: '2em' }}>
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement1}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement2}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement3}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement4}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement5}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement6}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement7}<br />
-                        <Input
-                          type="number"
-                          style={{ marginRight: '10px', width: '50px' }}
-                        />{this.props.statement8}
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement1}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement2}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement3}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement4}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement5}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement6}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement7}<br />
+
+                        <Input type="number" style={{ marginRight: '10px', width: '53px' }} />
+                        {this.props.statement8}
                       </div>
                     }
                   />
