@@ -1,5 +1,7 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
+import { status, json } from '../utilities/requestHandlers';
+
 
 const formLayout = {
   labelCol: { xs: { span: 24 }, sm: { span: 8} },
@@ -32,14 +34,37 @@ class RegistrationForm extends React.Component {
 
   constructor(props) { 
     super(props);
-    //this.onFinish = this.onFinish.bind(this);
+    this.onFinish = this.onFinish.bind(this);
   }
+
+  // Register new user using form inputs excluding confirm input
+  onFinish(arg1) {
+    console.log(`Received: ${arg1}`);
+    const { confirm, ...data } = arg1;
+    fetch('http://localhost:3000/api/v1/users', {  
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }        
+    })
+    .then(status)
+    .then(json)
+    .then(data => {
+        console.log(data);
+        alert("User added")
+    })
+    .catch(err => {
+	      console.error(err);
+        alert("Username and password must each be longer than 6 characters");
+    });  
+  };
 
   render() {
     return (
       <>
       <h1 style={{textAlign:'center', padding:30}}>Register New Account</h1>
-      <Form {...formLayout} name="register" /*onFinish={this.onFinish}*/ scrollToFirstError>
+      <Form {...formLayout} name="register" onFinish={this.onFinish} scrollToFirstError>
         
         <Form.Item name="username" label="Username" rules={usernameValidate}>
             <Input />
